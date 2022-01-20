@@ -23,6 +23,7 @@
         <module>camelot-integration</module>
         <module>camelot-starter-redis</module>
         <module>camelot-starter-mybatis</module>
+        <module>camelot-starter-generator</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
