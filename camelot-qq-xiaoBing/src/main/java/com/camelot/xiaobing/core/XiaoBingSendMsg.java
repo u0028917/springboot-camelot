@@ -57,6 +57,7 @@ public class XiaoBingSendMsg {
                 break;
             }
         }
+        builder.append(".....");
         return builder.toString();
     }
 
