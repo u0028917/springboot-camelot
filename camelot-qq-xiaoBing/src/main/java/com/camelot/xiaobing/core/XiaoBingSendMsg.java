@@ -24,7 +24,6 @@ public class XiaoBingSendMsg {
     }
 
     @Async
-    @Order
     @EventListener(XiaoBingEvent.class)
     public void sendError(XiaoBingEvent event) throws Exception {
         RuntimeException runtimeException = (RuntimeException) event.getSource();
