@@ -21,6 +21,8 @@ public class XiaoBingProperties {
      */
     private String groupName;
 
+    private String chartId;
+
     private String appId = "cli_a1626ab4ab3bd00b";
 
     private String appSecret = "a0QZwt87lf8luBNirQjGMfrmpYJxi15J";

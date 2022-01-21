@@ -28,7 +28,7 @@ public class XiaoBingSendMsg {
     public void sendError(XiaoBingEvent event) throws Exception {
         RuntimeException runtimeException = (RuntimeException) event.getSource();
         String accessToken = Objects.requireNonNull(getAccessToken(xiaoBingProperties));
-        String chartId = Objects.requireNonNull(getChartId(xiaoBingProperties, accessToken));
+        String chartId = xiaoBingProperties.getChartId() != null ? xiaoBingProperties.getChartId() : Objects.requireNonNull(getChartId(xiaoBingProperties, accessToken));
         sendMsg(xiaoBingProperties.getMessageUrl(), accessToken, chartId, runtimeException);
     }
 
