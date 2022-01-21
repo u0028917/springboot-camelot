@@ -2,6 +2,7 @@ package com.camelot.controller.example;
 
 import com.camelot.biz.example.ExampleBizService;
 import com.camelot.common.constant.Result;
+import com.camelot.common.exception.AutomaticAccrualException;
 import com.camelot.controller.base.BaseController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -34,7 +35,8 @@ public class ExampleController extends BaseController {
     @ApiOperation(value = "例子-查询列表总数", notes = "例子-查询列表总数")
     @GetMapping(value = "/count")
     public Result<?> queryCount() {
-        return Result.OK(exampleBizService.count());
+        throw new AutomaticAccrualException("123123");
+//        return Result.OK(exampleBizService.count());
     }
 
 

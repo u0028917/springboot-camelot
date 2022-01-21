@@ -26,6 +26,11 @@
     <dependencies>
         <dependency>
             <groupId>com.camelot</groupId>
+            <artifactId>camelot-qq-xiaoBing</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.camelot</groupId>
             <artifactId>camelot-biz</artifactId>
         </dependency>
         <!--Swagger3的依赖-->
