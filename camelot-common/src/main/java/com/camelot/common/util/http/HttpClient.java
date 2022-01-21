@@ -29,13 +29,13 @@ public class HttpClient {
     public static final String JSON_CONTENT_FORM = "application/json;charset=UTF-8";
     public static final String CONTENT_FORM = "application/x-www-form-urlencoded;charset=UTF-8";
 
-    public static String doService(String url, HttpParamers paramers, HttpHeader header, int connectTimeout, int readTimeout) throws Exception {
+    public static String doService(String url, HttpParamers paramers, HttpHeader header) throws Exception {
         HttpMethod httpMethod = paramers.getHttpMethod();
         switch (httpMethod) {
             case GET:
-                return doGet(url, paramers, header, connectTimeout, readTimeout);
+                return doGet(url, paramers, header);
             case POST:
-                return doPost(url, paramers, header, connectTimeout, readTimeout);
+                return doPost(url, paramers, header);
         }
         return null;
     }
@@ -45,12 +45,10 @@ public class HttpClient {
      * @param url
      * @param paramers
      * @param header
-     * @param connectTimeout
-     * @param readTimeout
      * @return
      * @throws IOException
      */
-    public static String doPost(String url, HttpParamers paramers, HttpHeader header, int connectTimeout, int readTimeout) throws IOException  {
+    public static String doPost(String url, HttpParamers paramers, HttpHeader header) throws IOException  {
         String responseData = "";
         CloseableHttpClient httpClient = null;
         CloseableHttpResponse httpResponse = null;
@@ -90,12 +88,10 @@ public class HttpClient {
      * @param url
      * @param params
      * @param header
-     * @param connectTimeout
-     * @param readTimeout
      * @return
      * @throws IOException
      */
-    public static String doGet(String url, HttpParamers params, HttpHeader header, int connectTimeout, int readTimeout) throws IOException {
+    public static String doGet(String url, HttpParamers params, HttpHeader header) throws IOException {
         String responseData = "";
         CloseableHttpClient httpClient = null;
         CloseableHttpResponse httpResponse = null;

@@ -21,12 +21,6 @@ import java.util.Map;
 @Service
 public class HttpServiceImpl implements HttpService {
 
-    @Value("${http.timeout.connect}")
-    private int connectTimeout;
-
-    @Value("${http.timeout.read}")
-    private int readTimeout;
-
     @Override
     public Map<String, Object> httpService(String serviceUrl, HttpParamers paramers) throws Exception{
         return httpService(serviceUrl, paramers, null);
@@ -53,7 +47,7 @@ public class HttpServiceImpl implements HttpService {
     private String service(String serviceUrl, HttpParamers paramers, HttpHeader header) throws Exception {
         String responseData = "";
         try {
-            responseData = HttpClient.doService(serviceUrl, paramers, header, this.connectTimeout, this.readTimeout);
+            responseData = HttpClient.doService(serviceUrl, paramers, header);
         } catch (Exception e) {
             throw new Exception(e.getMessage(), e);
         }
