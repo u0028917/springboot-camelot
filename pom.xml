@@ -24,6 +24,7 @@
         <module>camelot-starter-redis</module>
         <module>camelot-starter-mybatis</module>
         <module>camelot-qq-xiaoBing</module>
+        <module>camelot-starter-generator</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -131,6 +132,22 @@
                 <groupId>com.github.dozermapper</groupId>
                 <artifactId>dozer-core</artifactId>
                 <version>6.2.0</version>
+            </dependency>
+            <!-- Http 请求-->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmime</artifactId>
+                <version>4.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>4.4.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
