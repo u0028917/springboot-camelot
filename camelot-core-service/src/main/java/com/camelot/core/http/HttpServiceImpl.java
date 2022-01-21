@@ -5,6 +5,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.camelot.common.util.http.HttpClient;
 import com.camelot.common.util.http.HttpHeader;
 import com.camelot.common.util.http.HttpParamers;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -20,13 +21,18 @@ import java.util.Map;
 @Service
 public class HttpServiceImpl implements HttpService {
 
-    private int connectTimeout = 15000;
-    private int readTimeout = 30000;
+    @Value("${http.timeout.connect}")
+    private int connectTimeout;
 
+    @Value("${http.timeout.read}")
+    private int readTimeout;
+
+    @Override
     public Map<String, Object> httpService(String serviceUrl, HttpParamers paramers) throws Exception{
         return httpService(serviceUrl, paramers, null);
     }
 
+    @Override
     public Map<String, Object> httpService(String serviceUrl, HttpParamers paramers, HttpHeader header) throws Exception{
         String response = service(serviceUrl, paramers, header);
         try {
@@ -43,10 +49,8 @@ public class HttpServiceImpl implements HttpService {
             throw new Exception("返回结果异常,response:" + response, e);
         }
     }
-    public String service(String serviceUrl, HttpParamers paramers) throws Exception {
-        return service(serviceUrl, paramers, null);
-    }
-    public String service(String serviceUrl, HttpParamers paramers, HttpHeader header) throws Exception {
+
+    private String service(String serviceUrl, HttpParamers paramers, HttpHeader header) throws Exception {
         String responseData = "";
         try {
             responseData = HttpClient.doService(serviceUrl, paramers, header, this.connectTimeout, this.readTimeout);
