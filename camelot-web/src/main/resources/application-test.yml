@@ -82,8 +82,3 @@ logging:
   pattern:
     console: '%clr(%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n)'
     file: '[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] [%-5level] [%logger{50}]  %msg%n'
-
-http:
-  timeout:
-    connect: 15000
-    read: 30000
