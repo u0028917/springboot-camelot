@@ -160,7 +160,7 @@ public class Generator {
         Generator g = new Generator();
         Map<String, String> map = new HashMap<>();
 
-        map.put("config_offline", "配置信息");
+        map.put("common_request_log", "请求日志表");
 
         Iterator<Entry<String, String>> it = map.entrySet().iterator();
         while (it.hasNext()) {

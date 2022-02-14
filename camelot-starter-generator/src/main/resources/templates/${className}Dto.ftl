@@ -22,7 +22,7 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = false)
 public class ${className}Dto implements Serializable {
 
-private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
 <#list table.columns as column>
     /**

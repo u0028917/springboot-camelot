@@ -1,9 +1,9 @@
-package com.camelot.example.impl;
+package com.camelot.atom.example.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.camelot.example.ExampleAtomService;
-import com.camelot.example.dto.ExampleDto;
-import com.camelot.example.mapper.ExampleMapper;
+import com.camelot.atom.example.ExampleAtomService;
+import com.camelot.atom.example.dto.ExampleDto;
+import com.camelot.atom.example.mapper.ExampleMapper;
 import org.springframework.stereotype.Service;
 
 /**

@@ -22,7 +22,6 @@ import java.util.List;
 @Slf4j
 public class ExampleBizServiceImpl extends BaseBizServiceImpl implements ExampleBizService {
 
-    @Autowired
     private ExampleService exampleService;
 
     @Override

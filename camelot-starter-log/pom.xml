@@ -9,16 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>camelot-core-service</artifactId>
+    <artifactId>camelot-starter-log</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.camelot</groupId>
-            <artifactId>camelot-starter-redis</artifactId>
+            <artifactId>camelot-starter-mybatis</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.camelot</groupId>
-            <artifactId>camelot-starter-log</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>transmittable-thread-local</artifactId>
         </dependency>
     </dependencies>
 

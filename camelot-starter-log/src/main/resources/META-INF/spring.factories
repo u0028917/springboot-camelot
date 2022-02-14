@@ -1,0 +1,8 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.camelot.log.config.LogConfiguration
+
+org.springframework.context.ApplicationContextInitializer=\
+  com.camelot.log.config.TransmitLocalMDCInitializer
+
+
+

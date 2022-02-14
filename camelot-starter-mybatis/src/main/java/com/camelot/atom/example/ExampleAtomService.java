@@ -1,7 +1,7 @@
-package com.camelot.example.mapper;
+package com.camelot.atom.example;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.camelot.example.dto.ExampleDto;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.camelot.atom.example.dto.ExampleDto;
 
 /**
  * <p>Description: []</p>
@@ -11,6 +11,6 @@ import com.camelot.example.dto.ExampleDto;
  * @version 1.0
  * Copyright (c) 2017 北京柯莱特科技有限公司 交付部
  */
-public interface ExampleMapper extends BaseMapper<ExampleDto> {
+public interface ExampleAtomService extends IService<ExampleDto> {
 
 }

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import springfox.documentation.oas.annotations.EnableOpenApi;
 
-@MapperScan(value = {"com.camelot.*.mapper"})
+@MapperScan(value = {"com.camelot.atom.**.mapper"})
 @ServletComponentScan(basePackages = {"com.camelot"})
 @SpringBootApplication
 @EnableTransactionManagement

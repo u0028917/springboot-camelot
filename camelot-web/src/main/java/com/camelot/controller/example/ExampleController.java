@@ -3,6 +3,7 @@ package com.camelot.controller.example;
 import com.camelot.biz.example.ExampleBizService;
 import com.camelot.common.constant.Result;
 import com.camelot.controller.base.BaseController;
+import com.camelot.log.annotation.Log;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,7 @@ public class ExampleController extends BaseController {
      *
      * @return
      */
+    @Log("这是一个例子")
     @ApiOperation(value = "例子-查询列表总数", notes = "例子-查询列表总数")
     @GetMapping(value = "/count")
     public Result<?> queryCount() {

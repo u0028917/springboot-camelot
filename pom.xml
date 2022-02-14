@@ -25,6 +25,7 @@
         <module>camelot-starter-mybatis</module>
         <module>camelot-qq-xiaoBing</module>
         <module>camelot-starter-generator</module>
+        <module>camelot-starter-log</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -40,6 +41,7 @@
         <guava.version>29.0-jre</guava.version>
         <commons.version>2.6</commons.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <transmittable.version>2.12.2</transmittable.version>
     </properties>
 
     <dependencyManagement>
@@ -63,6 +65,11 @@
             <dependency>
                 <groupId>com.camelot</groupId>
                 <artifactId>camelot-core-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.camelot</groupId>
+                <artifactId>camelot-starter-log</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -148,6 +155,11 @@
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpcore</artifactId>
                 <version>4.4.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

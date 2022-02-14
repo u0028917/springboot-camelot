@@ -3,8 +3,8 @@ package com.camelot.core.example.impl;
 import com.camelot.common.util.BeanMapperUtils;
 import com.camelot.core.example.ExampleService;
 import com.camelot.core.example.vo.ExampleVo;
-import com.camelot.example.ExampleAtomService;
-import com.camelot.example.dto.ExampleDto;
+import com.camelot.atom.example.ExampleAtomService;
+import com.camelot.atom.example.dto.ExampleDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

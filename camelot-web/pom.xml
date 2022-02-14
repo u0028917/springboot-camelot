@@ -31,12 +31,11 @@
         </dependency>
         <dependency>
             <groupId>com.camelot</groupId>
-            <artifactId>camelot-biz</artifactId>
+            <artifactId>camelot-common</artifactId>
         </dependency>
-        <!--Swagger3的依赖-->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
+            <groupId>com.camelot</groupId>
+            <artifactId>camelot-biz</artifactId>
         </dependency>
         <!-- druid -->
         <dependency>

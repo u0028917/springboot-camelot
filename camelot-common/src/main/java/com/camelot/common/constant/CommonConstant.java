@@ -507,5 +507,13 @@ public class CommonConstant {
      * 计提记录导出标识-offline收入记录
      */
     public static final String RECORD_EXPORT_OFFLINE_REVENUE = "OFFLINE_REVENUE";
+    /**
+     * 微服务之间传递的唯一标识
+     */
+    public static final String MATE_TRACE_ID = "mate-trace-id";
+    /**
+     * 日志链路追踪id日志标志
+     */
+    public static final String LOG_TRACE_ID = "traceId";
 
 }
